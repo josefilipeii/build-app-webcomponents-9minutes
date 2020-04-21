@@ -2,5 +2,8 @@
   "name": "js-oabxmf",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@webcomponents/custom-elements": "^1.4.1",
+    "@webcomponents/webcomponentsjs": "^2.4.3"
+  }
 }

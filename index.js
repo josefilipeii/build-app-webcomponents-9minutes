@@ -1,9 +1,11 @@
+import '@webcomponents/custom-elements/src/native-shim.js';
 import { headNewsUrl } from "./apiParams.js";
+import  './news-article.component.js';
 
-window.addEventListener("load", () => {
-  console.log("Load");
-  fetchNews();
-});
+
+
+//addEvenrtListerner dooes not work on stackblitz
+ fetchNews();
 
 async function fetchNews() {
   const res = await fetch(headNewsUrl);
@@ -11,8 +13,7 @@ async function fetchNews() {
 
   const main = document.querySelector("main");
   json.articles.forEach(article => {
-    console.log(article);
-    const element = document.createElement("news");
+    const element = document.createElement("news-article");
     element.article = article;
     main.appendChild(element);
   });
